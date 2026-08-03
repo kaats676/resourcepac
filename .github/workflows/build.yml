@@ -1,0 +1,26 @@
+name: Build Resource Pack 
+
+on:
+push:
+branches: [ "main", "master" ]
+workflow_dispatch: 
+
+jobs:
+build:
+runs-on: ubuntu-latest 
+
+steps:
+
+* name: Checkout Code
+uses: actions/checkout@v4
+* name: Create Resource Pack ZIP
+uses: [thedoctor0/zip-release@0.7.5](mailto:thedoctor0/zip-release@0.7.5)
+with:
+type: 'zip'
+filename: 'Cat_Totem_Pack_1.16.5.zip'
+exclusions: '*.git* .github README.md'
+* name: Upload Finished Artifact
+uses: actions/upload-artifact@v4
+with:
+name: ResourcePack-Release
+path: Cat_Totem_Pack_1.16.5.zip
