@@ -4,5 +4,29 @@
 "sounds": [
 "minecraft:cat_totem"
 ]
+},
+"entity.player.attack.nodamage": {
+"replace": true,
+"sounds": [
+"minecraft:cat_hit"
+]
+},
+"entity.player.attack.strong": {
+"replace": true,
+"sounds": [
+"minecraft:cat_hit"
+]
+},
+"entity.player.attack.weak": {
+"replace": true,
+"sounds": [
+"minecraft:cat_hit"
+]
+},
+"entity.player.attack.crit": {
+"replace": true,
+"sounds": [
+"minecraft:cat_hit"
+]
 }
 }
