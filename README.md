@@ -1,19 +1,25 @@
-### 🐱 Cat Ultimate Pack (1.16.5)
+Cat Ultimate Pack (1.16.5)
 
-Глобальный мемный ресурспак для Minecraft 1.16.5, созданный целиком на iPad! Он превращает обычную игру в кошачий хаос, полностью меняя ключевые предметы, оружие и добавляя крутую озвучку. 
+[EN] A fun, cat-themed meme resource pack for Minecraft 1.16.5, created entirely on an iPad! This pack transforms your game into a chaotic cat world, fully replacing key items, weapons, and adding custom audio. 
 
-### 🌟 Что внутри этого мега-пака:
+[RU] Глобальный мемный ресурспак для Minecraft 1.16.5, созданный целиком на iPad! Он превращает обычную игру в кошачий хаос, полностью меняя ключевые предметы, оружие и добавляя крутую озвучку. 
 
-* 🐷 **Тотем бессмертия** -> Заменен на удивленного рыжего кота + мемный звук взрыва (18+, мат).
-* 🍏 **Золотое яблоко** -> Превращено в пухлого милого котика.
-* 🌀 **Эндер-перл** -> Заменен на меховой летающий шар (круглого рыжего кота-колобка).
-* ⚔️ **Кошачий Арсенал** -> Алмазный и Незеритовый мечи теперь выглядят как суровые боевые коты со щитами.
-* 🔊 **Боевая озвучка** -> Каждый твой удар рукой, замах или критическая атака мечом сопровождаются кастомным звуком "Мяу!".
+### 🌟 What's Inside / Что внутри:
 
-⚠️ **ВНИМАНИЕ (18+):** В звуковом файле тотема присутствует нецензурная лексика. Пак создавался ради рофла и веселья! 
+### ⚔️ Items & Weapons / Предметы и Оружие:
 
-### 🚀 Установка:
+* 🐷 **Totem of Undying** -> Replaced with a funny, surprised orange cat! / **Тотем бессмертия** -> Заменен на удивленного рыжего кота.
+* 🍏 **Golden Apple** -> Transformed into a chubby, cute kitty with a pink nose. / **Золотое яблоко** -> Превращено в пухлого милого котика.
+* 🌀 **Ender Pearl** -> Replaced with a round, fluffy flying cat-ball. / **Эндер-перл** -> Заменен на меховой летающий шар (круглого кота-колобка).
+* ⚔️ **Combat Cats** -> Iron, Diamond, and Netherite swords now look like badass combat cats holding shields! / **Кошачий Арсенал** -> Железный, Алмазный и Незеритовый мечи теперь выглядят как суровые боевые коты со щитами.
 
-1. Скачай собранный .zip архив проекта во вкладке **Versions** на Modrinth.
-2. Перенеси архив в папку .minecraft/resourcepacks/.
-3. Зайди в настройки игры, выбери этот пакет ресурсов и нажми "Готово".
+### 🔊 Custom Sounds / Кастомные звуки:
+
+* 💥 **Totem Sound (18+)** -> The custom totem activation sound contains strong language. This pack was made purely for fun and memes! / **Звук тотема (18+)** -> При срабатывании тотема воспроизводится мемный звук (внутри присутствует нецензурная лексика, мат). Создано ради рофла!
+* 🐾 **Hit Sounds** -> Every swing or hit with a weapon or bare hand is accompanied by a custom "Meow!" sound. / **Боевая озвучка** -> Каждый твой замах или удар рукой/оружием сопровождается звуком "Мяу!".
+
+### 🚀 How to Install / Как установить:
+
+1. Download the .zip archive from the **Versions** tab. / Скачай собранный .zip архив проекта во вкладке **Versions**.
+2. Move the downloaded file to your .minecraft/resourcepacks/ folder. / Перенеси скачанный файл в папку .minecraft/resourcepacks/.
+3. Launch Minecraft 1.16.5 and enable the pack in your Resource Packs settings! / Запусти Minecraft 1.16.5, зайди в настройки, выбери этот пакет ресурсов и нажми "Готово".
