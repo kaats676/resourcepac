@@ -15,14 +15,13 @@ jobs:
 
       - name: Create Clean ZIP
         run: |
-          # Архивируем строго файлы, чтобы не было структуры папка-в-папке
+          # Архивируем строго файлы россыпью, обходя баги Айпада
           zip -r Cat_Ultimate_Pack_1.16.5.zip assets pack.mcmeta pack.png
 
       - name: Upload to Modrinth
-        uses: modrinth/minotaur@v2
+        uses: modrinth/minotaur@v2.9.0
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
-          # Твой ID проекта на Modrinth (из ссылки твоего проекта)
           project-id: 'CBPs9lrm' 
           version-number: '1.1.0'
           version-name: 'Cat Ultimate Pack v1.1.0'
