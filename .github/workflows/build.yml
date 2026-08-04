@@ -13,12 +13,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Create Resource Pack ZIP
+      - name: Create Clean ZIP
         run: |
-          zip -r Cat_Totem_Pack_1.16.5.zip assets pack.mcmeta pack.png
+          # Этот скрипт гарантирует структуру ZIP -> Файлы россыпью
+          zip -r Cat_Ultimate_Pack_1.16.5.zip assets pack.mcmeta pack.png
 
       - name: Upload Finished Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ResourcePack-Release
-          path: Cat_Totem_Pack_1.16.5.zip
+          name: Cat_Ultimate_Pack_1.16.5
+          path: Cat_Ultimate_Pack_1.16.5.zip
