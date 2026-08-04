@@ -1,4 +1,4 @@
-name: Build Resource Pack
+name: Build and Deploy to Modrinth
 
 on:
   push:
@@ -15,11 +15,19 @@ jobs:
 
       - name: Create Clean ZIP
         run: |
-          # Этот скрипт гарантирует структуру ZIP -> Файлы россыпью
+          # Архивируем строго файлы, чтобы не было структуры папка-в-папке
           zip -r Cat_Ultimate_Pack_1.16.5.zip assets pack.mcmeta pack.png
 
-      - name: Upload Finished Artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload to Modrinth
+        uses: modrinth/minotaur@v2
         with:
-          name: Cat_Ultimate_Pack_1.16.5
-          path: Cat_Ultimate_Pack_1.16.5.zip
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          # Твой ID проекта на Modrinth (из ссылки твоего проекта)
+          project-id: 'CBPs9lrm' 
+          version-number: '1.1.0'
+          version-name: 'Cat Ultimate Pack v1.1.0'
+          version-body: 'Глобальное кошачье обновление! Добавлены мечи, тотем, эндер-перл и звуки ударов (18+).'
+          file: 'Cat_Ultimate_Pack_1.16.5.zip'
+          game-versions: '1.16.5'
+          loaders: 'minecraft'
+          version-type: 'release'
