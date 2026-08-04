@@ -15,18 +15,23 @@ jobs:
 
       - name: Create Clean ZIP
         run: |
-          # Архивируем строго файлы россыпью, обходя баги Айпада
+          # Архивируем файлы россыпью в корень без лишних папок
           zip -r Cat_Ultimate_Pack_1.16.5.zip assets pack.mcmeta pack.png
 
-      - name: Upload to Modrinth
-        uses: modrinth/minotaur@v2.9.0
-        with:
-          token: ${{ secrets.MODRINTH_TOKEN }}
-          project-id: 'CBPs9lrm' 
-          version-number: '1.1.0'
-          version-name: 'Cat Ultimate Pack v1.1.0'
-          version-body: 'Глобальное кошачье обновление! Добавлены мечи, тотем, эндер-перл и звуки ударов (18+).'
-          file: 'Cat_Ultimate_Pack_1.16.5.zip'
-          game-versions: '1.16.5'
-          loaders: 'minecraft'
-          version-type: 'release'
+      - name: Upload to Modrinth via API
+        run: |
+          # Отправляем идеальный архив напрямую на сайт через Modrinth API
+          curl -X POST "https://modrinth.com" \
+            -H "Authorization: ${{ secrets.MODRINTH_TOKEN }}" \
+            -F "data={
+              \"project_id\": \"CBPs9lrm\",
+              \"version_number\": \"1.1.0\",
+              \"name\": \"Cat Ultimate Pack v1.1.0\",
+              \"changelog\": \"Глобальное кошачье обновление мечей, тотема, эндер-перла и звуков ударов (18+).\",
+              \"game_versions\": [\"1.16.5\"],
+              \"loaders\": [\"minecraft\"],
+              \"version_type\": \"release\",
+              \"featured\": true,
+              \"primary_file\": \"file\"
+            }" \
+            -F "file=@Cat_Ultimate_Pack_1.16.5.zip"
