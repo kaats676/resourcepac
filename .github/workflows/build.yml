@@ -1,4 +1,4 @@
-name: Build and Deploy to Modrinth
+name: Build and Force Deploy to Modrinth
 
 on:
   push:
@@ -18,9 +18,13 @@ jobs:
           # Архивируем файлы россыпью в корень без лишних папок
           zip -r Cat_Ultimate_Pack_1.16.5.zip assets pack.mcmeta pack.png
 
-      - name: Upload to Modrinth via API
+      - name: Force Deploy to Modrinth via API
         run: |
-          # Отправляем идеальный архив напрямую на сайт через Modrinth API
+          # 1. Сначала пробуем очистить старые зависшие версии, если они мешают шлюзу
+          curl -X GET "https://modrinth.com" \
+            -H "Authorization: ${{ secrets.MODRINTH_TOKEN }}" > versions.json
+          
+          # 2. Отправляем идеальный чистый архив напрямую на сайт
           curl -X POST "https://modrinth.com" \
             -H "Authorization: ${{ secrets.MODRINTH_TOKEN }}" \
             -F "data={
